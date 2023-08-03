@@ -1,0 +1,59 @@
+{/* Typography.mdx */}
+
+import { Meta, Typeset } from '@storybook/blocks';
+
+<Meta title="Typography" />
+
+export const typography = {
+  type: {
+    primary: '"Poppins"',
+  },
+  weight: {
+    Light: '300',
+    Medium: '500',
+    Bold: '700',
+    
+  },
+  size: {
+    H1: 28,
+    H2: 22,
+    H3: 16,
+  },
+};
+
+export const SampleText1 = 'Heading 1 Light';
+export const SampleText2 = 'Heading 2 Light';
+export const SampleText3 = 'Heading 3 Medium';
+
+# Typography
+
+**Font:** Poppins
+
+**Weights:** 300(light), 700(bold), 500(medium)
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.H1),
+  ]}
+  fontWeight={typography.weight.light}
+  sampleText={SampleText1}
+  fontFamily={typography.type.primary}
+/>
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.H2),
+  ]}
+  fontWeight={typography.weight.light}
+  sampleText={SampleText2}
+  fontFamily={typography.type.primary}
+/>
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.H3),
+  ]}
+  fontWeight={typography.weight.medium}
+  sampleText={SampleText3}
+  fontFamily={typography.type.primary}
+/>

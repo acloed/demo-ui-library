@@ -1,11 +1,11 @@
 import React, { HTMLAttributes } from 'react';
 
 
-
 // Interface for the Badge props
 interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   // Additional props can be defined here if needed
   variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
+  status?: 'positive' | 'negative' | 'neutral' | 'error' | 'warning' | 'selected';
   color?: string;
   backgroundColor?: string;
   children: React.ReactNode;
@@ -24,7 +24,7 @@ interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   //);
 //};
 
-const Badge: React.FC<BadgeProps> = ({ children, variant = 'primary', ...rest }) => {
+const SBadge: React.FC<BadgeProps> = ({ children, variant = 'primary', ...rest }) => {
   // Define Tailwind CSS classes based on the variant prop
   const getBadgeClasses = () => {
     switch (variant) {
@@ -50,4 +50,5 @@ const Badge: React.FC<BadgeProps> = ({ children, variant = 'primary', ...rest })
 
 
 
-export default Badge;
+export default SBadge;
+

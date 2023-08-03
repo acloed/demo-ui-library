@@ -6,6 +6,8 @@ const meta: Meta<typeof Button> = {
   component: Button,
   title: "Marbella/Button",
   argTypes: {},
+  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
+  tags: ['autodocs'],
 };
 export default meta;
 
